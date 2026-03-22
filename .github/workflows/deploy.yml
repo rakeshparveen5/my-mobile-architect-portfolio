@@ -1,0 +1,49 @@
+name: Deploy Quasar App to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout repo
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. Setup Node
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      # 3. Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # 4. Install Quasar CLI
+      - name: Install Quasar CLI
+        run: npm install -g @quasar/cli
+
+      # 5. Build app
+      - name: Build Quasar App
+        run: quasar build
+
+      # 6. Deploy to gh-pages branch
+      - name: Deploy
+        run: |
+          cd dist/spa
+          git init
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "Deploy site"
+          git branch -M gh-pages
+          git remote add origin https://github.com/${{ github.repository }}.git
+          git push -f origin gh-pages
