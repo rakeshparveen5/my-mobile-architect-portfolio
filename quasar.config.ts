@@ -51,7 +51,7 @@ export default defineConfig((/* ctx */) => {
 
       // rebuildCache: true, // rebuilds Vite/linter/etc cache on startup
 
-      publicPath: '/my-portfolio/', // for GitHub Pages deployment
+      publicPath: '/my-mobile-architect-portfolio/', // for GitHub Pages deployment
       // analyze: true,
       // env: {},
       // rawDefine: {}
