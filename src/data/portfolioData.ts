@@ -11,13 +11,13 @@ export const skills: Skill[] = [
   { name: 'React Native', category: 'cross-platform', years: 2.5 },
   { name: 'Kotlin Multiplatform', category: 'cross-platform', years: 3 },
   { name: 'Quasar', category: 'cross-platform', years: 2.5 },
+  { name: 'Vue.js', category: 'cross-platform', years: 2.5 },
 
   // Languages
   { name: 'Core Java', category: 'language', years: 7 },
   { name: 'Kotlin', category: 'language', years: 9 },
   { name: 'Dart', category: 'language', years: 6 },
   { name: 'Swift', category: 'language', years: 3 },
-  { name: 'Vue.js', category: 'language', years: 2.5 },
   { name: 'TypeScript', category: 'language', years: 5 },
   { name: 'JavaScript', category: 'language', years: 6 },
 
