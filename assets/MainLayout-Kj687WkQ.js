@@ -1,0 +1,1 @@
+import{B as e,D as t,H as n,L as r,O as i,S as a}from"./event-UZ8pzDs3.js";import{o,t as s}from"./QLayout-DwnNhMlw.js";var c=i({__name:`MainLayout`,setup(i){return(i,c)=>{let l=e(`router-view`);return r(),a(s,{view:`lHh Lpr lFf`},{default:n(()=>[t(o,null,{default:n(()=>[t(l)]),_:1})]),_:1})}}});export{c as default};
